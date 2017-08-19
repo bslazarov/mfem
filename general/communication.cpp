@@ -257,7 +257,6 @@ void GroupTopology::Load(istream &in)
    Create(integer_sets, 823);
 }
 
-
 // specializations of the MPITypeMap static member
 template<> const MPI_Datatype MPITypeMap<int>::mpi_type = MPI_INT;
 template<> const MPI_Datatype MPITypeMap<double>::mpi_type = MPI_DOUBLE;

@@ -420,6 +420,9 @@ protected:
 template <typename Type>
 struct MPITypeMap { static const MPI_Datatype mpi_type; };
 
+// specializations of the MPITypeMap static member
+template<> const MPI_Datatype MPITypeMap<int>::mpi_type;
+template<> const MPI_Datatype MPITypeMap<double>::mpi_type;
 
 /** Reorder MPI ranks to follow the Z-curve within the physical machine topology
     (provided that functions to query physical node coordinates are available).
