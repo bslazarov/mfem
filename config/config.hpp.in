@@ -53,6 +53,9 @@
 // Enable experimental OpenMP support. Requires MFEM_THREAD_SAFE.
 // #define MFEM_USE_OPENMP
 
+// Enable UVM memory for Array.
+// #define MFEM_USE_UVM_ARRAY
+
 // Internal MFEM option: enable group/batch allocation for some small objects.
 // #define MFEM_USE_MEMALLOC
 

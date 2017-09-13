@@ -69,6 +69,7 @@ MFEM_USE_LIBUNWIND   = NO
 MFEM_USE_LAPACK      = NO
 MFEM_THREAD_SAFE     = NO
 MFEM_USE_OPENMP      = NO
+MFEM_USE_UVM_ARRAY   = NO
 MFEM_USE_MEMALLOC    = YES
 MFEM_TIMER_TYPE      = $(if $(NOTMAC),2,4)
 MFEM_USE_SUNDIALS    = NO
@@ -118,6 +119,10 @@ LAPACK_LIB = $(if $(NOTMAC),-llapack -lblas,-framework Accelerate)
 # OpenMP configuration
 OPENMP_OPT = -fopenmp
 OPENMP_LIB =
+
+CUDA_DIR       = /usr/local/cuda
+UVM_ARRAY_OPT = -I$(CUDA_DIR)/include
+UVM_ARRAY_LIB = -L$(CUDA_DIR)/lib64 -lcudart
 
 # Used when MFEM_TIMER_TYPE = 2
 POSIX_CLOCKS_LIB = -lrt
